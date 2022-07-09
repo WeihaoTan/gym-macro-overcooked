@@ -51,7 +51,7 @@ Eg. When playing Overcooked_MA_V1, entering `1, 2 ,3`. Agent1 go to get tomato. 
 | Map A | Map B | Map C |
 |:---:|:---:|:---:|
 |<img src="image/2_agent_A.png" width=260></img>  | <img src="image/2_agent_B.png" width=260></img> | <img src="image/2_agent_C.png" width=260></img> |
-| <img src="image/3_agent_A.png" width=260></img>  | <img src="image/3_agent_B.png" width=260></img> | <<img src="image/3_agent_C.png" width=260></img> |
+| <img src="image/3_agent_A.png" width=260></img>  | <img src="image/3_agent_B.png" width=260></img> | <img src="image/3_agent_C.png" width=260></img> |
 | <img src="image/3_agent_A_9.png" width=260></img>  | <img src="image/3_agent_B_9.png" width=260></img> | <img src="image/3_agent_C_9.png" width=260></img> |
 
 
