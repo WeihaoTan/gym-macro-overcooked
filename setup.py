@@ -3,10 +3,10 @@
 from setuptools import setup
 
 setup(
-    name='gym-macro-overcooked',
+    name='gym_macro_overcooked',
     version='0.0.1',
     description='Overcooked gym environment with macro actions',
-    packages=['gym-macro-overcooked'],
+    packages=['gym_macro_overcooked'],
     package_dir={},
 
     install_requires=[
