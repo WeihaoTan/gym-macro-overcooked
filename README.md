@@ -1,7 +1,12 @@
 # Macro-Action-Based Multi-Agent Reinforcement Learning
 
-# Introduction
+<p align="center">
+    <img src="image/Overcooked_A.gif" width=260></img>
+    <img src="image/Overcooked_B.gif" width=260></img>
+    <img src="image/Overcooked_C.gif" width=260></img>
+</p>
 
+# Introduction
 Adapted from [gym-cooking](https://github.com/rosewang2008/gym-cooking). 
 
 Robots need to learn cooperating with each other to prepare a certain dish according to the recipe and deliver it to the `star' counter cell as soon as possible. The challenge is that the recipe is unknown to robots. Robots have to learn the correct procedure in terms of picking up raw vegetables, chopping, and merging in a plate before delivering.
@@ -43,26 +48,13 @@ Enter the index of the action(primitive/macro) for each agent. The index of each
 Eg. When playing Overcooked_MA_V1, entering `1, 2 ,3`. Agent1 go to get tomato. Agent2 go to get lettuce. Agent3 go to get onion.
 
 ## Environment
-<p align="center">
-    <img src="image/2_agent_A.png" width=260></img>
-    <img src="image/2_agent_B.png" width=260></img>
-    <img src="image/2_agent_C.png" width=260></img>
-</p>
-<p align="center">
-    <img src="image/3_agent_A.png" width=260></img>
-    <img src="image/3_agent_B.png" width=260></img>
-    <img src="image/3_agent_C.png" width=260></img>
-</p>
-<p align="center">
-    <img src="image/3_agent_A_9.png" width=260></img>
-    <img src="image/3_agent_B_9.png" width=260></img>
-    <img src="image/3_agent_C_9.png" width=260></img>
-</p>
-<center>
-    Map A &emsp;  &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  
-    Map B &nbsp;  &nbsp;  &nbsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  
-    Map C 
-</center>
+| Map A | Map B | Map C |
+|:---:|:---:|:---:|
+|<img src="image/2_agent_A.png" width=260></img>  | <img src="image/2_agent_B.png" width=260></img> | <img src="image/2_agent_C.png" width=260></img> |
+| <img src="image/3_agent_A.png" width=260></img>  | <img src="image/3_agent_B.png" width=260></img> | <<img src="image/3_agent_C.png" width=260></img> |
+| <img src="image/3_agent_A_9.png" width=260></img>  | <img src="image/3_agent_B_9.png" width=260></img> | <img src="image/3_agent_C_9.png" width=260></img> |
+
+
 
 
 ### Parameters
@@ -110,19 +102,10 @@ C: map C
 3: Each agent only observes the position and status of the entities within a 7X7 square  centered on the robot.
 ...
 ```
-<p align="center">
-    <img src="image/3_agent_A.png" width=280></img>
-    <img src="image/obs1_1.png" width=120></img>
-    <img src="image/obs1_2.png" width=200></img>
-    <img src="image/obs1_3.png" width=280></img>
-</p>
-<left>
-    obs_radius: &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp; &emsp; &emsp;  &emsp;
-    0 &emsp;  &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp; &emsp;  &emsp; &emsp;
-    1 &emsp;  &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp; 
-    2 &emsp;  &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp;  &emsp;  &emsp;  &emsp;  &emsp;
-    3 
-</left>
+
+|<img src="image/3_agent_A.png" width=210></img> | <img src="image/obs1_1.png" width=90></img> | <img src="image/obs1_2.png" width=150></img> | <img src="image/obs1_3.png" width=210></img> |
+|:---:|:---:|:---:|:---:|
+| obs_radius: 0 | 1 | 2 | 3 |
 
 - task
 ```
@@ -137,16 +120,13 @@ task :
 5 : lettuce-onion salad
 6 : lettuce-onion-tomato salad
 ```
-<p align="center">
-    <img src="image/lettuce-tomato-salad.png" width=280></img>
-    &emsp;  &emsp;  &emsp; &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp;
-    <img src="image/lettuce-onion-tomato-salad.png" width=280></img>
-</p>
-<left>
-    &emsp; &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp;
-    lettuce-tomato salad &emsp;  &emsp;  &emsp; &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp;  &emsp; &emsp;  &emsp;  &emsp; 
-    lettuce-onion-tomato salad
-</left>
+
+
+|<img src="image/lettuce-tomato-salad.png" width=280></img> | <img src="image/lettuce-onion-tomato-salad.png" width=280></img> | 
+|:---:|:---:|
+| lettuce-tomato salad | lettuce-onion-tomato salad | 
+
+
 
 
 - mode
