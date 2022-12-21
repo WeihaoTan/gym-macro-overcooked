@@ -138,7 +138,7 @@ image: the observation is returned in rgb array
 ## Observation
 - vector  
 ```
-obs = [tomato.x, tomato.y, tomato.status, lettuce.x, lettuce.y, lettuce.status, onion.x, onion.y, onion.status, plate-1.x, plate-1.y, plate-2.x, plate-2.y, agent1.x, agent1.y, agent2.x, agent2.y, (agent3.x, agent3.y), onehotTask]  
+obs = [tomato.x, tomato.y, tomato.status, lettuce.x, lettuce.y, lettuce.status, onion.x, onion.y, onion.status, plate-1.x, plate-1.y, plate-2.x, plate-2.y, knife-1.x, knife-1.y, knife-2.x, knife-2.y, delivery.x, delivery.y, agent1.x, agent1.y, agent2.x, agent2.y, (agent3.x, agent3.y), onehotTask]  
 
 Agents only observe the positions and status of the entities within obs_radius. The items not observed are masked as 0 in the corresponding dims.
 ```
