@@ -172,3 +172,15 @@ Env terminates when the correct dish is delivered.
 
 ## Extention
 The values of reward can be changed in rewardList. Users can add new map of different layout by adding map in overcooked_V1.py. The new map is allowed to change the position of entities or delete any entities. Adding new entities is not supported.
+
+## Citations
+If you are using MacroMARL in your research, please cite the corresponding papers listed below:
+```
+@InProceedings{xiao_neurips_2022,
+  author = "Xiao, Yuchen and Wei, Tan and Amato, Christopher",
+  title = "Asynchronous Actor-Critic for Multi-Agent Reinforcement Learning",
+  booktitle = "Proceedings of the Thirty-Sixth Conference on Neural Information Processing Systems (NeurIPS)",
+  year = "2022"
+}
+```
+
