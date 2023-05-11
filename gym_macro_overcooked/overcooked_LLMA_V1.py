@@ -46,7 +46,7 @@ class AStarAgent(object):
         else:
             return self.pass_agent <= other.pass_agent
 
-class Overcooked_MA_V1(Overcooked_V1):
+class Overcooked_LLMA_V1(Overcooked_V1):
 
     """
     Overcooked Domain Description
@@ -56,9 +56,9 @@ class Overcooked_MA_V1(Overcooked_V1):
 
     Only macro-action is available in this env.
     Macro-actions in map A:
-    ["stay", "get tomato", "get lettuce", "get onion", "get plate 1", "get plate 2", "go to knife 1", "go to knife 2", "deliver", "chop", "right", "down", "left", "up"]
+    ["stay", "get tomato", "get lettuce", "get onion", "get plate 1", "get plate 2", "go to knife 1", "go to knife 2", "deliver", "chop"]
     Macro-actions in map B/C:
-    ["stay", "get tomato", "get lettuce", "get onion", "get plate 1", "get plate 2", "go to knife 1", "go to knife 2", "deliver", "chop", "go to counter", "right", "down", "left", "up"]
+    ["stay", "get tomato", "get lettuce", "get onion", "get plate 1", "get plate 2", "go to knife 1", "go to knife 2", "deliver", "chop", "go to counter"]
     
     1) Agent is allowed to pick up/put down food/plate on the counter;
     2) Agent is allowed to chop food into pieces if the food is on the cutting board counter;
@@ -97,9 +97,9 @@ class Overcooked_MA_V1(Overcooked_V1):
         self._createMacroActionItemList()
 
         if map_type == "A":
-            self.macroActionName = ["stay", "get tomato", "get lettuce", "get onion", "get plate 1", "get plate 2", "go to knife 1", "go to knife 2", "deliver", "chop", "right", "down", "left", "up"]
+            self.macroActionName = ["stay", "get tomato", "get lettuce", "get onion", "get plate 1", "get plate 2", "go to knife 1", "go to knife 2", "deliver", "chop"]
         else:
-            self.macroActionName = ["stay", "get tomato", "get lettuce", "get onion", "get plate 1", "get plate 2", "go to knife 1", "go to knife 2", "deliver", "chop", "go to counter", "right", "down", "left", "up"]
+            self.macroActionName = ["stay", "get tomato", "get lettuce", "get onion", "get plate 1", "get plate 2", "go to knife 1", "go to knife 2", "deliver", "chop", "go to counter"]
         self.action_space = spaces.Discrete(len(self.macroActionName))
 
         if self.xlen == 7 and self.ylen == 7:
@@ -317,15 +317,6 @@ class Overcooked_MA_V1(Overcooked_V1):
                 else:
                     primitive_action = ACTIONIDX["stay"]
                     self.macroAgent[idx].cur_macro_action_done = True
-            elif macro_action >= self.macroActionName.index("right"):
-                self.macroAgent[idx].cur_macro_action_done = True
-                action = macro_action - self.macroActionName.index("right")
-                new_x = agent.x + DIRECTION[action][0]
-                new_y = agent.y + DIRECTION[action][1]
-                if ITEMNAME[agent.pomap[new_x][new_y]] == "space":
-                    primitive_action = action
-                else:
-                    primitive_action = ACTIONIDX["stay"]
             else:
                 target_x, target_y = self._findPOitem(agent, macro_action)
 
